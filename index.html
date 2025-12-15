@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney SEO: Dominate Search & Grow</title>
+    <meta name="description" content="Unleash your online potential with Sydney's premier SEO agency. we specialize in keyword strategy, technical audits, and content optimization to drive clear business results.">
+    <meta name="keywords" content="Sydney SEO, Search Engine Optimization, Digital Marketing, SEO Audit, Content Strategy">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config for Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7', // Brand Color
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#06b6d4', // Vibrant Cyan
+                            600: '#0891b2',
+                        }
+                    },
+                    borderRadius: {
+                        'xl': '0.75rem',
+                        '2xl': '1rem',
+                        '3xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px rgba(0,0,0,0.08)',
+                        'glow': '0 0 20px rgba(14, 165, 233, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles ensure consistency */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #0284c7 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(#e0f2fe 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        /* Smooth reveal animation classes */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-gray-900 group-hover:text-primary-600 transition-colors">Sydney SEO</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">About</a>
+                    <a href="#features" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Services</a>
+                    <a href="#benefits" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Results</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Reviews</a>
+                    <a href="blog.html" class="text-gray-600 hover:text-primary-600 font-medium transition-colors">Blog</a>
+                    <a href="https://sseo.com" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-600 hover:text-primary-600 focus:outline-none p-2 transition-colors">
+                        <i class="fa fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+            <div class="px-4 pt-4 pb-6 space-y-2 flex flex-col">
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50">About</a>
+                <a href="#features" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50">Services</a>
+                <a href="#benefits" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50">Results</a>
+                <a href="#testimonials" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50">Reviews</a>
+                <a href="blog.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-primary-50">Blog</a>
+                <a href="https://sseo.com" class="block mt-4 text-center bg-primary-600 text-white px-5 py-3 rounded-full font-bold hover:bg-primary-700">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white pointer-events-none"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 left-0 -ml-20 -mt-20 w-96 h-96 bg-accent-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 border border-primary-100 text-primary-700 text-sm font-semibold mb-8 hover:bg-primary-100 transition-colors cursor-default">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-primary-500"></span>
+                </span>
+                Now Accepting New Clients in Sydney
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-tight">
+                Sydney SEO: <br>
+                <span class="gradient-text">Dominate Search & Grow</span>
+            </h1>
+            
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 leading-relaxed">
+                Unleash your online potential and capture more leads with expert SEO strategies tailored specifically for the competitive Sydney market.
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://sseo.com" class="w-full sm:w-auto px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-full shadow-lg hover:shadow-primary-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                    Start Your Growth
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </a>
+                <a href="#about" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 font-bold rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                    Learn Our Process
+                </a>
+            </div>
+
+            <!-- Metric Highlights -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto border-t border-gray-100 pt-10">
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-gray-900">98%</p>
+                    <p class="text-sm text-gray-500 mt-1">Client Retention</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-gray-900">300+</p>
+                    <p class="text-sm text-gray-500 mt-1">Projects Delivered</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-gray-900">5x</p>
+                    <p class="text-sm text-gray-500 mt-1">Average ROI</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-3xl font-bold text-gray-900">24/7</p>
+                    <p class="text-sm text-gray-500 mt-1">Real-time Reporting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative order-2 lg:order-1">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary-100 to-accent-100 rounded-3xl transform rotate-3 -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team analyzing SEO data" class="rounded-2xl shadow-soft w-full object-cover h-[500px]">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">Our Story & Mission</div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">We Are Sydney's Digital Growth Architects</h2>
+                    <div class="space-y-6 text-lg text-gray-600">
+                        <p>
+                            Founded in the bustling heart of Sydney, our agency began with a singular, crystallized vision: to demystify Search Engine Optimization for local businesses often overwhelmed by technical jargon. We started as a small duo of data enthusiasts tired of seeing great companies buried on the second page of Google. Today, we have evolved into a premier full-service agency, leveraging deep local market insights to craft strategies that don't just increase traffic, but fundamentally transform business revenue.
+                        </p>
+                        <p>
+                            Our mission is simple yet ambitious: to empower Sydney businesses to claim their rightful place at the top of search results through transparent, ethical, and high-impact SEO practices. We believe that true growth comes from a partnership built on trust and measurable results. Our core values center on data-driven decision-making, unwavering transparency, and a relentless pursuit of excellence, ensuring that every campaign we launch is a stepping stone to your long-term dominance in the digital landscape.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Comprehensive SEO Capabilities</h2>
+                <p class="text-xl text-gray-600">We utilize a holistic approach to search marketing, combining technical precision with creative content strategies.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100">
+                    <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-primary-600 group-hover:text-white transition-colors">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Keyword Research & Strategy</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        We identify high-value, low-competition keywords that your customers are actually searching for. Our data-backed strategy ensures you target terms with the highest intent to convert, not just random traffic.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100">
+                    <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-primary-600 group-hover:text-white transition-colors">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Technical SEO Audits</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Our experts dive deep into your website's architecture. We fix crawl errors, improve site speed, optimize mobile performance, and repair broken links to ensure Google can properly index your content.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group border border-gray-100">
+                    <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-primary-600 group-hover:text-white transition-colors">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Content Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Content is king, but context is queen. We craft and optimize compelling, authority-building content that answers your audience's questions and positions your brand as the industry thought leader.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                <div class="space-y-12">
+                    <div class="pb-10 border-b border-gray-100">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">Why Partner With Us?</h2>
+                        <p class="text-lg text-gray-600">We don't just chase algorithms; we chase business growth. Our strategies are designed to deliver tangible impact.</p>
+                    </div>
+                    
+                    <div class="flex gap-6 group">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center text-accent-600 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Higher Search Rankings</h3>
+                            <p class="text-gray-600">Ascend to the top of Google for keywords that matter. Be the first solution your potential clients see.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center text-accent-600 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Increased Organic Traffic</h3>
+                            <p class="text-gray-600">Drive a steady stream of high-quality visitors to your site without paying for every click via Ads.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center text-accent-600 group-hover:scale-110 transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Greater Brand Visibility</h3>
+                            <p class="text-gray-600">Establish authority in your niche. When customers see you everywhere, trust—and sales—follow.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative h-full min-h-[400px]">
+                    <div class="absolute inset-0 bg-gray-200 rounded-3xl overflow-hidden shadow-soft">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SEO Dashboard Growth" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary-900/30"></div>
+                        
+                        <!-- Floating Card Overlay -->
+                        <div class="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-white/20">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="bg-green-100 p-2 rounded-full text-green-600">
+                                    <i class="fa fa-arrow-up"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-500 font-medium">Monthly Organic Growth</p>
+                                    <p class="text-2xl font-bold text-gray-900">+127%</p>
+                                </div>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary-600 font-semibold tracking-wide uppercase text-sm">Success Stories</span>
+                <h2 class="mt-2 text-3xl md:text-4xl font-bold text-gray-900">What Our Clients Say</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow italic">"The technical audit revealed issues we never knew existed. Within 3 months of fixing them, our traffic doubled."</p>
+                    <div class="mt-auto flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">SJ</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Sarah Jenkins</div>
+                            <div class="text-sm text-gray-500">Marketing Director</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow italic">"Sydney SEO's keyword strategy was a game changer for our local plumbing business. We are finally ranking #1."</p>
+                    <div class="mt-auto flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">MC</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Michael Chen</div>
+                            <div class="text-sm text-gray-500">CEO, PlumbRight</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow italic">"Professional, transparent, and incredibly knowledgeable. Their reporting makes it easy to see the ROI every month."</p>
+                    <div class="mt-auto flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">DS</div>
+                        <div>
+                            <div class="font-bold text-gray-900">David Smith</div>
+                            <div class="text-sm text-gray-500">Small Business Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 flex-grow italic">"We've worked with three other agencies before, but this is the first time we've seen sustainable, long-term growth."</p>
+                    <div class="mt-auto flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">EW</div>
+                        <div>
+                            <div class="font-bold text-gray-900">Emma Watson</div>
+                            <div class="text-sm text-gray-500">Founder, E-Comm Co.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute -left-20 top-40 w-64 h-64 bg-primary-100 rounded-full opacity-20 filter blur-3xl"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary-200 transition-colors duration-300 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="text-lg font-semibold text-gray-800">How long does it take to see results from SEO?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon h-5 w-5 text-primary-500 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 text-gray-600 text-base leading-relaxed border-t border-gray-100 pt-4">
+                        SEO is a long-term strategy. While technical fixes can show results in a few weeks, substantial organic growth and ranking improvements typically take 3 to 6 months depending on your industry's competitiveness and current site authority.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary-200 transition-colors duration-300 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="text-lg font-semibold text-gray-800">Do you offer guaranteed rankings?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon h-5 w-5 text-primary-500 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 text-gray-600 text-base leading-relaxed border-t border-gray-100 pt-4">
+                        No ethical SEO agency can guarantee specific rankings because Google's algorithms are constant changing and external to our control. However, we guarantee best practices, transparency, and a relentless commitment to improving your visibility and traffic.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary-200 transition-colors duration-300 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="text-lg font-semibold text-gray-800">What is included in the monthly report?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon h-5 w-5 text-primary-500 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 text-gray-600 text-base leading-relaxed border-t border-gray-100 pt-4">
+                        Our comprehensive monthly reports include keyword ranking movements, organic traffic growth, conversion metrics, tasks completed during the month, and a strategic roadmap for the upcoming month. We ensure you always know what you're paying for.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary-200 transition-colors duration-300 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="text-lg font-semibold text-gray-800">Do you work with small businesses?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon h-5 w-5 text-primary-500 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 text-gray-600 text-base leading-relaxed border-t border-gray-100 pt-4">
+                        Absolutely. We have tailored packages designed specifically for small to medium-sized businesses in Sydney. We believe every business deserves access to high-quality SEO expertise, regardless of size.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-gray-50 rounded-2xl border border-gray-100 hover:border-primary-200 transition-colors duration-300 overflow-hidden">
+                    <button class="faq-question w-full px-8 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="text-lg font-semibold text-gray-800">Are contracts lock-in based?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="faq-icon h-5 w-5 text-primary-500 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-8 pb-6 text-gray-600 text-base leading-relaxed border-t border-gray-100 pt-4">
+                        We generally operate on 6 or 12-month agreements to ensure enough time to generate results, but we also offer flexible month-to-month options for specific consulting services. We want you to stay because of the results, not the fine print.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-24 bg-gray-900 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/90 to-gray-900/60 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Business Meeting" class="w-full h-full object-cover">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Scale Your Revenue?</h2>
+            <p class="max-w-2xl mx-auto text-xl text-gray-300 mb-10">
+                Stop losing customers to your competitors. Let's build a strategy that puts you in front of the right people at the right time.
+            </p>
+            <a href="https://sseo.com" class="inline-block bg-white text-primary-700 hover:bg-gray-100 font-bold px-10 py-4 rounded-full text-lg shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-300">
+                Get Your Free Audit
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+    <!-- Contact Form Section - Centered Card Layout -->
+    <section id="contact" class="py-20" style="background: linear-gradient(to bottom, #ffffff, #f9fafb);">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #111827;">Get in Touch</h2>
+          <p class="text-lg max-w-2xl mx-auto opacity-75" style="color: #111827;">
+            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          </p>
+        </div>
+
+        <div class="rounded-2xl shadow-xl p-8 md:p-12" style="background: #ffffff;">
+          <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
+            <input type="hidden" name="access_key" value="0b917c63-84c9-466a-b417-2cad89801d7f">
+            <input type="hidden" name="redirect" value="false">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div>
+              <label for="name" class="block text-sm font-semibold mb-2" style="color: #111827;">
+                Full Name <span style="color: #ef4444;">*</span>
+              </label>
+              <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                required 
+                class="w-full px-4 py-3 border rounded-2xl outline-none transition-all"
+                style="border-color: #d1d5db; background: #ffffff; color: #111827;"
+                onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px #3b82f620'"
+                onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'"
+                placeholder="John Doe"
+              >
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2" style="color: #111827;">
+                Email Address <span style="color: #ef4444;">*</span>
+              </label>
+              <input 
+                type="email" 
+                name="email" 
+                id="email" 
+                required 
+                class="w-full px-4 py-3 border rounded-2xl outline-none transition-all"
+                style="border-color: #d1d5db; background: #ffffff; color: #111827;"
+                onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px #3b82f620'"
+                onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'"
+                placeholder="john@example.com"
+              >
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-2" style="color: #111827;">
+                Phone Number
+              </label>
+              <input 
+                type="tel" 
+                name="phone" 
+                id="phone" 
+                class="w-full px-4 py-3 border rounded-2xl outline-none transition-all"
+                style="border-color: #d1d5db; background: #ffffff; color: #111827;"
+                onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px #3b82f620'"
+                onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'"
+                placeholder="+1 (555) 000-0000"
+              >
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-semibold mb-2" style="color: #111827;">
+                Message <span style="color: #ef4444;">*</span>
+              </label>
+              <textarea 
+                name="message" 
+                id="message" 
+                required 
+                rows="5" 
+                class="w-full px-4 py-3 border rounded-2xl outline-none resize-none transition-all"
+                style="border-color: #d1d5db; background: #ffffff; color: #111827;"
+                onfocus="this.style.borderColor='#3b82f6'; this.style.boxShadow='0 0 0 3px #3b82f620'"
+                onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'"
+                placeholder="Tell us about your project or inquiry..."
+              ></textarea>
+            </div>
+
+            <div class="pt-4">
+              <button 
+                type="submit" 
+                id="submit-btn"
+                class="w-full font-semibold py-4 px-8 rounded-2xl transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-xl"
+                style="background: #3b82f6; color: #ffffff;"
+              >
+                Send Message
+              </button>
+            </div>
+            
+            <div id="form-message" class="mt-4 p-4 rounded-2xl hidden" style="background: #10b981; color: #ffffff;">
+              ✓ Message sent successfully!
+            </div>
+          </form>
+          
+          <script>
+            (function() {
+              const form = document.getElementById('contact-form');
+              const submitBtn = document.getElementById('submit-btn');
+              const messageDiv = document.getElementById('form-message');
+              
+              form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                
+                try {
+                  const formData = new FormData(form);
+                  const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                  });
+                  
+                  const result = await response.json();
+                  
+                  if (result.success) {
+                    form.reset();
+                    messageDiv.classList.remove('hidden');
+                    submitBtn.textContent = 'Sent';
+                    
+                    setTimeout(() => {
+                      messageDiv.classList.add('hidden');
+                      submitBtn.disabled = false;
+                      submitBtn.textContent = 'Send Message';
+                    }, 5000);
+                  } else {
+                    throw new Error('Submission failed');
+                  }
+                } catch (error) {
+                  submitBtn.disabled = false;
+                  submitBtn.textContent = 'Send Message';
+                  messageDiv.style.background = '#ef4444';
+                  messageDiv.textContent = '✗ Failed to send. Please try again.';
+                  messageDiv.classList.remove('hidden');
+                  
+                  setTimeout(() => {
+                    messageDiv.classList.add('hidden');
+                    messageDiv.style.background = '#10b981';
+                    messageDiv.textContent = '✓ Message sent successfully!';
+                  }, 5000);
+                }
+              });
+            })();
+          </script>
+        </div>
+
+        <div class="mt-12 text-center opacity-75">
+          <p style="color: #111827;">
+            Or email us directly at <a href="mailto:hello@example.com" class="font-semibold hover:opacity-80 transition-opacity" style="color: #3b82f6;">hello@example.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Col -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4 text-white">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-xl">Sydney SEO</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6">
+                        Empowering Sydney businesses to dominate search results and grow sustainably through data-driven SEO strategies.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-primary-400 transition-colors">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-primary-400 transition-colors">Reviews</a></li>
+                        <li><a href="blog.html" class="hover:text-primary-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="hover:text-primary-400 transition-colors">SEO Audit</a></li>
+                        <li><a href="#features" class="hover:text-primary-400 transition-colors">Keyword Strategy</a></li>
+                        <li><a href="#features" class="hover:text-primary-400 transition-colors">Content Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Contact</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mt-0.5 text-primary-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg>
+                            <span class="text-sm">test@test.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mt-0.5 text-primary-500">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                            </svg>
+                            <span class="text-sm">Sydney CBD, NSW 2000<br>Australia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">&copy; 2025 Sydney SEO. All rights reserved.</p>
+                <div class="flex gap-6 text-sm">
+                    <a href="privacy.html" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                // Close menu when clicking a link
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // FAQ Accordion Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                if (question) {
+                    question.addEventListener('click', () => {
+                        const answer = item.querySelector('.faq-answer');
+                        
+                        // Close all others
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                otherItem.querySelector('.faq-answer')?.classList.add('hidden');
+                                otherItem.querySelector('.faq-icon')?.classList.remove('rotate-180');
+                                otherItem.classList.remove('border-primary-200');
+                            }
+                        });
+                        
+                        // Toggle current
+                        answer?.classList.toggle('hidden');
+                        item.querySelector('.faq-icon')?.classList.toggle('rotate-180');
+                        item.classList.toggle('border-primary-200');
+                    });
+                }
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#' && href.length > 1) {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            const headerOffset = 80; // Adjust for sticky header
+                            const elementPosition = target.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth"
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
